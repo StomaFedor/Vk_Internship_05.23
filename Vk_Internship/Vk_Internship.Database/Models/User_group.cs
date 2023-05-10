@@ -23,6 +23,7 @@ namespace Vk_Internship.Database.Models
 
         public string Code { get; set; }
 
+        [ConcurrencyCheck]
         public string Description { get; set; }
 
         [Required]

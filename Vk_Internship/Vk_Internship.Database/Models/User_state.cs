@@ -20,8 +20,10 @@ namespace Vk_Internship.Database.Models
         [ForeignKey("User")]
         public int Id { get; set; }
 
+        [ConcurrencyCheck]
         public string Code { get; set; }
 
+        [ConcurrencyCheck]
         public string Description { get; set; }
 
         [Required]

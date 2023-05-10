@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Vk_Internship.Database.ModelsDto;
 using Vk_Internship.Database.Repositories.UserRepository;
 
@@ -26,7 +27,7 @@ namespace Vk_Internship.WebService.Controllers
             }
             catch (Exception ex)
             {
-                response = StatusCode(StatusCodes.Status500InternalServerError);
+                response = StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
 
             return response;
@@ -43,7 +44,7 @@ namespace Vk_Internship.WebService.Controllers
             }
             catch (Exception ex)
             {
-                response = StatusCode(StatusCodes.Status500InternalServerError);
+                response = StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
 
             return response;
@@ -60,7 +61,7 @@ namespace Vk_Internship.WebService.Controllers
             }
             catch (Exception ex)
             {
-                response = StatusCode(StatusCodes.Status500InternalServerError);
+                response = StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
 
             return response;
@@ -78,7 +79,7 @@ namespace Vk_Internship.WebService.Controllers
             }
             catch (Exception ex)
             {
-                response = StatusCode(StatusCodes.Status500InternalServerError);
+                response = StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
 
             return response;

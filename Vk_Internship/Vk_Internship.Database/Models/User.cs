@@ -13,8 +13,10 @@ namespace Vk_Internship.Database.Models
     {
         public int Id { get; set; }
 
+        [ConcurrencyCheck]
         public string Login { get; set; }
 
+        [ConcurrencyCheck]
         public string Password { get; set; }
 
         [Column(TypeName = "Date")]
