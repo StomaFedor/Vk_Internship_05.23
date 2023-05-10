@@ -16,7 +16,7 @@ namespace Vk_Internship.Database.Repositories.UserRepository
 
         private User ConvertDtoToUser(UserDto dto)
         {
-            if (dto.Code_state != CodeState.Active && dto.Code_state != CodeState.Active)
+            if (dto.Code_state != CodeState.Active && dto.Code_state != CodeState.Blocked)
                 throw new Exception("The user status is incorrectly specified");
             if (dto.Code_group != CodeGroup.Admin && dto.Code_group != CodeGroup.User)
                 throw new Exception("The user's group is specified incorrectly");
